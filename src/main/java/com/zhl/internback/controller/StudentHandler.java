@@ -28,11 +28,27 @@ public class StudentHandler {
         return studentRepository.findByStunum(Stunum);
     }
 
-    //修改实习单位
+    //修改学生信息
     @PutMapping("/updata")
     public String updata(@RequestBody Student student){
         Student student1 = studentRepository.save(student);
         if (student1 != null){
+            return "success";
+        }else {
+            return "err";
+        }
+    }
+    //按学号删除
+    @DeleteMapping("/delete/{stunum}")
+    public void deleteByStunum(@PathVariable Integer stunum){
+        studentRepository.deleteByStunum(stunum);
+    }
+
+    //添加学生信息1
+    @PostMapping("/save")
+    public String save(@RequestBody Student student){
+        Student result = studentRepository.save(student);
+        if(result != null){
             return "success";
         }else {
             return "err";

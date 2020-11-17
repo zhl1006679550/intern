@@ -82,9 +82,9 @@ public class Student {
         this.Password = Password;
     }
 
-    @Override
-    public String toString(){
-        return "Address [Id=" + Id + ", Name=" + Name + ", Stunum=" + Stunum + ", Classnamess="
-                + Classnamess + ", Company=" + Company + ", Password=" + Password + "]";
-    }
+//    @Override
+//    public String toString(){
+//        return "Address [Id=" + Id + ", Name=" + Name + ", Stunum=" + Stunum + ", Classnamess="
+//                + Classnamess + ", Company=" + Company + ", Password=" + Password + "]";
+//    }
 }
