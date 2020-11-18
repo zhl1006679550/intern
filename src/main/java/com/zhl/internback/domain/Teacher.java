@@ -10,20 +10,20 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int Id;
     @Id
-    int Tec_num;
+    int tecnum;
     String Name;
     String Classnamess;
-    String Password;
+    String password;
 
     public Teacher() {
     }
 
     public Teacher(int id, int tec_num, String name, String classnamess, String password) {
         Id = id;
-        Tec_num = tec_num;
+        tecnum = tec_num;
         Name = name;
         Classnamess = classnamess;
-        Password = password;
+        password = password;
     }
 
     public int getId() {
@@ -34,12 +34,12 @@ public class Teacher {
         this.Id = Id;
     }
 
-    public int getTec_num() {
-        return Tec_num;
+    public int getTecnum() {
+        return tecnum;
     }
 
-    public void setTec_num(int Tec_num) {
-        this.Tec_num = Tec_num;
+    public void setTecnum(int Tec_num) {
+        this.tecnum = Tec_num;
     }
 
     public String getName() {
@@ -59,10 +59,10 @@ public class Teacher {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String Password) {
-        this.Password = Password;
+        this.password = Password;
     }
 }
