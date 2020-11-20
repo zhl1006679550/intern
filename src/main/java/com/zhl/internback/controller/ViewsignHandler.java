@@ -33,4 +33,9 @@ public class ViewsignHandler {
         Pageable pageable = PageRequest.of(page-1,size);
         return viewsignRepository.findAll(pageable);
     }
+    @GetMapping("/findByStunum/{stunum}/{page}/{size}")
+    public Page<Viewsign> findByStunum(@PathVariable("page") Integer page, @PathVariable("size") Integer size,@PathVariable("stunum") Integer stunum){
+        Pageable pageable = PageRequest.of(page-1,size);
+        return viewsignRepository.findByStunum(stunum,pageable);
+    }
 }

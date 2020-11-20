@@ -24,7 +24,7 @@ public class Viewsign {
     @Column(name = "Password")
     private String Password;
     @Column(name = "stu_num")
-    private Integer stu_num;
+    private Integer stunum;
     @Column(name = "time")
     private Timestamp time;
     @Column(name = "sign_address")
@@ -41,7 +41,7 @@ public class Viewsign {
         Classnamess = classnamess;
         Company = company;
         Password = password;
-        this.stu_num = stu_num;
+        this.stunum = stu_num;
         this.time = time;
         this.sign_address = sign_address;
         Address = address;
@@ -87,12 +87,12 @@ public class Viewsign {
         this.Password = Password;
     }
 
-    public Integer getStu_num() {
-        return stu_num;
+    public Integer getStunum() {
+        return stunum;
     }
 
-    public void setStu_num(Integer stu_num) {
-        this.stu_num = stu_num;
+    public void setStunum(Integer stunum) {
+        this.stunum = stunum;
     }
 
     public Timestamp getTime() {

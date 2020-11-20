@@ -2,10 +2,7 @@ package com.zhl.internback.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -14,10 +11,10 @@ public class Student {
     private Integer Id;
     private String Name;
     @Id
-    private Integer Stunum;
+    private Integer stunum;
     private String Classnamess;
     private String Company;
-    private String Password;
+    private String password;
 
 
     public Student() {
@@ -28,10 +25,10 @@ public class Student {
         super();
         this.Id = id;
         this.Name = name;
-        this.Stunum = stunum;
+        this.stunum = stunum;
         this.Classnamess = classnamess;
         this.Company = company;
-        this.Password = password;
+        this.password = password;
     }
 
     public void setId(Integer Id) {
@@ -51,11 +48,11 @@ public class Student {
     }
 
     public Integer getStunum() {
-        return this.Stunum;
+        return stunum;
     }
 
-    public void setStunum(Integer Stunum) {
-        this.Stunum = Stunum;
+    public void setStunum(Integer stunum) {
+        this.stunum = stunum;
     }
 
     public String getClassnamess() {
@@ -75,11 +72,11 @@ public class Student {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String Password) {
-        this.Password = Password;
+        this.password = Password;
     }
 
 //    @Override

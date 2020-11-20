@@ -54,4 +54,16 @@ public class StudentHandler {
             return "err";
         }
     }
+
+    //登录查询
+    @GetMapping("/findByStunumAndPassword?stunum={stunum}&password={password}")
+    public String findByNameAndPassword(@PathVariable Integer stunum, @PathVariable String password){
+        System.out.println(studentRepository.findByStunumAndPassword(stunum,password));
+        Student result =  studentRepository.findByStunumAndPassword(stunum,password);
+        if (result != null){
+            return "success";
+        }else {
+            return "err";
+        }
+    }
 }

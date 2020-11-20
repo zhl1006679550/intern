@@ -2,15 +2,13 @@ package com.zhl.internback.controller;
 
 import com.zhl.internback.domain.Sign_in;
 import com.zhl.internback.domain.Student;
+import com.zhl.internback.domain.Users;
 import com.zhl.internback.repository.Sign_inRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,5 +32,16 @@ public class Sign_inHandler {
     @GetMapping("/findByStunum/{Stunum}")
     public List<Sign_in> findByStu_num(@PathVariable("Stunum") Integer Stunum){
         return sign_inRepository.findByStunum(Stunum);
+    }
+
+    @PostMapping("/save")
+    public String save(@RequestBody Sign_in sign_in){
+        System.out.println(sign_in);
+        Sign_in result = sign_inRepository.save(sign_in);
+        if(result != null){
+            return "success";
+        }else {
+            return "err";
+        }
     }
 }

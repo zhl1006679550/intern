@@ -40,6 +40,10 @@ public class StudentRepositoryTest {
         student.setStunum(20200012);
         student.setPassword("woaini");
         System.out.println(studentRepository.save(student));
+    }
 
+    @Test
+    void findByStunumAndPassword(){
+        System.out.println(studentRepository.findByStunumAndPassword(20200002,"20166332"));
     }
 }
